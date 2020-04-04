@@ -77,6 +77,7 @@ namespace LotusUI
             string query = "INSERT INTO `data`(`id`, `date`, `time`, `longitude`, `latitude`, `temperature`, `humidity`, `object`, `times_found`, `score`) VALUES (NULL, '" + 
                 date + "', '" + time + "', '" + longitude + "', '" + latitude + "', '" + temperature + "', '" + humidity + "', '" + _object + "', '" + times_found + "', '" + score + "')";
 
+            this.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, connection);
             cmd.ExecuteNonQuery();
             this.CloseConnection();
