@@ -219,7 +219,7 @@ namespace LotusUI
                 DB1.Insert(date, time, longitude, latitude, temperature, humidity, _object, times_found, score);
                 databaseLabel.Text = "Data Stored Successfully";
             }
-            catch(Exception e)
+            catch(Exception)
             {
                 writer.WriteLine(date + "$" + time + "$" + inputString);
                 databaseLabel.Text = "ERROR: Couldn't Store Data\nStored in Local File Instead";
